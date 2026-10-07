@@ -117,20 +117,22 @@ export const projetos: Projeto[] = [
         imagemTipo: "icone",
         corFundo: "#0b4d63",
         link: "https://centraldodev.github.io/ControleFinanceiro/",
-        tecnologias: ["TypeScript", "React Native", "Expo", "Firebase", "Firestore"],
+        tecnologias: ["TypeScript", "React Native", "Expo", "Firebase", "Firestore", "Cloud Functions", "Express"],
         funcionalidades: [
             "Receitas e despesas com categorias, recorrências e parcelamentos",
             "Cartões de crédito e débito com limite e controle de faturas",
             "Metas financeiras e orçamentos por categoria",
             "Grupos compartilhados com código de convite",
             "Gráficos de tendência, gastos por categoria e previsão do próximo mês",
-            "Insights do período e dicas de economia"
+            "Insights do período e dicas de economia",
+            "Controle por voz pela assistente Ive: saldo, resumo do mês, contas a pagar e lançamentos"
         ],
         destaquesTecnicos: [
             "Mesma base de código para Android e Web com Expo",
             "Firebase Auth e Firestore com regras de segurança por usuário e grupo",
             "API REST de análise de dados",
-            "Busca aproximada (fuzzy search) nas transações"
+            "Busca aproximada (fuzzy search) nas transações",
+            "Integração com a Ive assinada com HMAC-SHA256 e tokens revogáveis; lançamentos por conversa, com a Ive perguntando o que faltar"
         ]
     },
     {
