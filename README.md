@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfólio · Natanael Ramos
 
-## Getting Started
+Portfólio pessoal de desenvolvedor web e mobile, com projetos, habilidades, trajetória e currículo.
 
-First, run the development server:
+**Acesse:** https://n2ilva.github.io/MeuPortifolio/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Prévia do portfólio](app/opengraph-image.png)
+
+## Stack
+
+- **Next.js 16** (App Router) com exportação estática, publicado no **GitHub Pages**
+- **React 19** e **TypeScript**
+- CSS próprio por página, com o reboot do Bootstrap e utilitários enxutos ([app/utilities.css](app/utilities.css))
+- Ícones: Bootstrap Icons e SVGs do Devicon
+- Fontes Inter e JetBrains Mono via `next/font`
+
+## Destaques técnicos
+
+- **Uma rota por página** (`/projetos/`, `/habilidades/`, `/trajetoria/`, `/contato/`) e uma página gerada para cada projeto (`/projetos/[id]/`) com `generateStaticParams`
+- **Conteúdo separado do código:** projetos, tecnologias, trajetória e contatos ficam em [`data/`](data/); perfil e menu em [`config/site.config.ts`](config/site.config.ts)
+- **SEO e compartilhamento:** título, descrição e prévia (Open Graph) por página, `sitemap.xml`, favicon e página 404
+- **Acessibilidade:** navegação por teclado, link "pular para o conteúdo", rótulos nos ícones e respeito a `prefers-reduced-motion`
+- **Desempenho:** imagens em WebP, CSS carregado por página e ícones em SVG em vez de fontes de ícones (Lighthouse: 100 em acessibilidade, boas práticas e SEO)
+- **Currículo versionado:** o PDF é gerado a partir de [`curriculo/index.html`](curriculo/)
+- **CI/CD:** lint e build no GitHub Actions a cada push na `main`, com deploy automático no GitHub Pages
+
+## Estrutura
+
+```text
+app/          Rotas (App Router), layout, metadados, sitemap e ícones
+components/   Componentes de cada página e o layout (barra lateral e menu mobile)
+config/       Perfil, menu e textos da home
+data/         Projetos, tecnologias, trajetória e contatos
+curriculo/    Fonte HTML do currículo em PDF
+public/       Imagens, ícones e o PDF do currículo
+scripts/      Geração do PDF do currículo
+utils/        Funções auxiliares (caminho base, metadados)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Rodando localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Requer Node.js 20 ou mais recente.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm ci
+npm run dev        # http://localhost:3000
+```
 
-## Learn More
+| Comando | O que faz |
+| --- | --- |
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Gera o site estático em `out/` |
+| `npm run lint` | ESLint |
+| `npm run curriculo` | Gera `public/Natanael-Ramos-Curriculo.pdf` a partir de `curriculo/index.html` (usa o Chrome instalado) |
 
-To learn more about Next.js, take a look at the following resources:
+## Como atualizar o conteúdo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Novo projeto:** adicione um item em [`data/projects.ts`](data/projects.ts) e a imagem em `public/projetos/`. A página do projeto, o card e o sitemap são gerados automaticamente.
+- **Nova tecnologia:** adicione em [`data/technologies.ts`](data/technologies.ts) e o SVG em `public/icons/tech/` (baixe o SVG em [devicon.dev](https://devicon.dev)).
+- **Currículo:** edite [`curriculo/index.html`](curriculo/index.html) e rode `npm run curriculo`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contato
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- LinkedIn: [linkedin.com/in/natanael2ilva](https://www.linkedin.com/in/natanael2ilva)
+- E-mail: natanaelsantos_silva@outlook.com
