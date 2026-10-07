@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natanael Ramos - Desenvolvedor Web & Mobile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#2c3e50',
+                        'secondary': '#34495e',
+                        'accent': '#3498db',
+                        'sidebar-bg': '#f4f6f7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-roboto bg-white text-gray-800 flex justify-center m-0 p-0">
+    <div class="flex w-[210mm] h-[297mm] mx-auto overflow-hidden">
+        <aside class="w-[30%] bg-sidebar-bg text-primary p-4 flex flex-col gap-3">
+            <div class="text-center">
+                <div class="w-24 h-24 mx-auto mb-2 rounded-full overflow-hidden border-4 border-white shadow-md">
+                    <img src="foto.jpg" alt="Foto de Perfil" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-xl text-primary mb-1 uppercase tracking-wide leading-tight">NATANAEL SANTOS DA SILVA RAMOS</h1>
+                <h2 class="text-sm text-gray-600 font-normal">Desenvolvedor Web & Mobile</h2>
+            </div>
+
+            <div>
+                <h3 class="text-base uppercase border-b-2 border-accent pb-1 mb-2 text-primary font-bold">Contato</h3>
+                <ul class="list-none">
+                    <li class="flex items-center mb-2 text-xs">
+                        <i class="fas fa-phone w-6 text-accent mr-2"></i>
+                        <a href="tel:+5562999633100" class="hover:text-accent">(62) 99963-3100</a>
+                    </li>
+                    <li class="flex items-center mb-2 text-xs">
+                        <i class="fas fa-envelope w-6 text-accent mr-2"></i>
+                        <a href="mailto:natanaelsantos_silva@outlook.com" class="hover:text-accent">natanaelsantos_silva@outlook.com</a>
+                    </li>
+                    <li class="flex items-center mb-2 text-xs">
+                        <i class="fas fa-map-marker-alt w-6 text-accent mr-2"></i>
+                        <span>Goiânia, GO</span>
+                    </li>
+                    <li class="flex items-center mb-2 text-xs">
+                        <i class="fab fa-linkedin w-6 text-accent mr-2"></i>
+                        <a href="https://linkedin.com/in/natanael2ilva" class="hover:text-accent" target="_blank"
+                            rel="noopener noreferrer">linkedin.com/in/natanael2ilva</a>
+                    </li>
+                    <li class="flex items-center mb-2 text-xs">
+                        <i class="fab fa-github w-6 text-accent mr-2"></i>
+                        <a href="https://github.com/n2ilva" class="hover:text-accent" target="_blank"
+                            rel="noopener noreferrer">github.com/n2ilva</a>
+                    </li>
+                    <li class="flex items-center mb-2 text-xs">
+                        <i class="fas fa-globe w-6 text-accent mr-2"></i>
+                        <a href="https://n2ilva.github.io/MeuPortifolio/" class="hover:text-accent" target="_blank"
+                            rel="noopener noreferrer">n2ilva.github.io/MeuPortifolio</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-base uppercase border-b-2 border-accent pb-1 mb-2 text-primary font-bold">Habilidades</h3>
+                <p class="text-xs font-semibold mb-0.5">Linguagens</p>
+                <p class="text-xs text-gray-700 mb-1.5">TypeScript • JavaScript • Python • Kotlin</p>
+                <p class="text-xs font-semibold mb-0.5">Front-end & Mobile</p>
+                <p class="text-xs text-gray-700 mb-1.5">React • Next.js • React Native • Expo • Tailwind CSS • Bootstrap</p>
+                <p class="text-xs font-semibold mb-0.5">Back-end</p>
+                <p class="text-xs text-gray-700 mb-1.5">Node.js • Express • FastAPI • APIs REST • WebSocket</p>
+                <p class="text-xs font-semibold mb-0.5">Banco de Dados & BaaS</p>
+                <p class="text-xs text-gray-700 mb-1.5">Firebase • Supabase • MongoDB • PostgreSQL</p>
+                <p class="text-xs font-semibold mb-0.5">DevOps, Cloud & Testes</p>
+                <p class="text-xs text-gray-700 mb-1.5">Git • GitHub Actions • Docker • Linux • AWS • Azure • Vitest • Playwright</p>
+                <p class="text-xs font-semibold mb-0.5">Infraestrutura (diferencial)</p>
+                <p class="text-xs text-gray-700">Redes Cisco • Windows Server • Active Directory • VMware • Fortinet • ITIL</p>
+            </div>
+
+            <div>
+                <h3 class="text-base uppercase border-b-2 border-accent pb-1 mb-2 text-primary font-bold">Idiomas</h3>
+                <ul class="list-none">
+                    <li class="flex justify-between mb-1 border-b border-gray-300 pb-0.5 text-xs">
+                        <span>Português</span>
+                        <span class="font-bold text-gray-600">Nativo</span>
+                    </li>
+                    <li class="flex justify-between mb-1 border-b border-gray-300 pb-0.5 text-xs">
+                        <span>Inglês</span>
+                        <span class="font-bold text-gray-600">Técnico</span>
+                    </li>
+                    <li class="flex justify-between mb-1 border-b border-gray-300 pb-0.5 text-xs">
+                        <span>Espanhol</span>
+                        <span class="font-bold text-gray-600">Básico</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-base uppercase border-b-2 border-accent pb-1 mb-2 text-primary font-bold">Pretensões</h3>
+                <ul class="list-none">
+                    <li class="flex justify-between mb-1 border-b border-gray-300 pb-0.5 text-xs">
+                        <span>Pretensão Salarial</span>
+                        <span class="font-bold text-gray-600">A combinar</span>
+                    </li>
+                    <li class="flex justify-between mb-1 border-b border-gray-300 pb-0.5 text-xs">
+                        <span>Regime de Trabalho</span>
+                        <span class="font-bold text-gray-600">CLT | PJ</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="w-[70%] p-4">
+            <section>
+                <h2 class="text-lg text-primary border-b-2 border-gray-200 pb-1 mb-2 font-bold">Sobre Mim</h2>
+                <p class="text-gray-800 text-justify text-xs">
+                    Desenvolvedor <strong>web e mobile</strong> com <strong>TypeScript, React, Next.js, React Native e
+                    Node.js</strong>, além de <strong>Python</strong> no back-end. Desenvolvo aplicações completas, da
+                    interface ao deploy, com apps publicados e um <strong>projeto em produção para cliente</strong> com
+                    pagamentos integrados. Antes do desenvolvimento, atuei <strong>8 anos em infraestrutura de TI e
+                    redes</strong>, o que me dá base sólida em Linux, cloud, segurança e ambientes de produção.
+                </p>
+            </section>
+
+            <section>
+                <h2 class="text-lg text-primary border-b-2 border-gray-200 pb-1 mb-2 mt-3 font-bold">Projetos</h2>
+
+                <div class="mb-2">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <h3 class="text-sm font-bold text-secondary">Sara Ramos - Atividades Pedagógicas</h3>
+                        <a href="https://sararamos.com.br/" class="text-xs text-accent font-medium">sararamos.com.br</a>
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-600 mb-0.5 italic">Cliente real · Next.js, Express, MongoDB, Stripe</h4>
+                    <ul class="text-gray-800 text-xs list-disc ml-4 space-y-0.5">
+                        <li>Loja de atividades e <strong>área PRO com editor online</strong> para criar e editar atividades, exportando em PDF</li>
+                        <li>API em Express, pagamentos <strong>Stripe</strong>, login Google, testes <strong>Vitest/Playwright</strong> e CI/CD no GitHub Actions</li>
+                    </ul>
+                </div>
+
+                <div class="mb-2">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <h3 class="text-sm font-bold text-secondary">Cifra Estúdio</h3>
+                        <span class="text-xs text-accent font-medium">Em desenvolvimento</span>
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-600 mb-0.5 italic">Python, FastAPI, PyTorch, Supabase · interface em Flutter</h4>
+                    <ul class="text-gray-800 text-xs list-disc ml-4 space-y-0.5">
+                        <li>Gera <strong>partitura, cifra e tablatura</strong> a partir de músicas, separando os instrumentos com IA</li>
+                        <li>Back-end <strong>FastAPI</strong> com fila persistente (Supabase/PostgreSQL) e processamento em GPU</li>
+                    </ul>
+                </div>
+
+                <div class="mb-2">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <h3 class="text-sm font-bold text-secondary">Ive - Assistente Virtual (Desktop & Mobile)</h3>
+                        <span class="text-xs text-accent font-medium">Em desenvolvimento</span>
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-600 mb-0.5 italic">Python, TypeScript, React Native, Expo, Azure</h4>
+                    <ul class="text-gray-800 text-xs list-disc ml-4 space-y-0.5">
+                        <li>Assistente por voz que controla o computador (macOS/Windows), com app mobile como controle</li>
+                        <li>Servidor na Azure, conexões assinadas com <strong>Ed25519</strong> e plugins em processo isolado</li>
+                    </ul>
+                </div>
+
+                <div class="mb-2">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <h3 class="text-sm font-bold text-secondary">Controle Financeiro</h3>
+                        <a href="https://centraldodev.github.io/ControleFinanceiro/" class="text-xs text-accent font-medium">Publicado</a>
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-600 mb-0.5 italic">TypeScript, React Native, Expo, Firebase</h4>
+                    <ul class="text-gray-800 text-xs list-disc ml-4 space-y-0.5">
+                        <li>Gastos, cartões, metas e grupos compartilhados, com gráficos, previsões e dicas de economia</li>
+                    </ul>
+                </div>
+
+                <div class="mb-2">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <h3 class="text-sm font-bold text-secondary">Agenda Familiar</h3>
+                        <a href="https://centraldodev.github.io/AgendaFamiliar/" class="text-xs text-accent font-medium">Publicado</a>
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-600 mb-0.5 italic">TypeScript, React Native, Expo, Firebase, Cloud Functions</h4>
+                    <ul class="text-gray-800 text-xs list-disc ml-4 space-y-0.5">
+                        <li>Tarefas em grupo em tempo real, com modo privado, permissões e regras do Firestore testadas</li>
+                    </ul>
+                </div>
+
+                <div class="mb-1">
+                    <div class="flex justify-between items-baseline mb-0.5">
+                        <h3 class="text-sm font-bold text-secondary">QMaster</h3>
+                        <a href="https://centraldodev.github.io/QMaster/" class="text-xs text-accent font-medium">Publicado</a>
+                    </div>
+                    <h4 class="text-xs font-medium text-gray-600 mb-0.5 italic">TypeScript, React Native, Expo, NativeWind, Firebase</h4>
+                    <ul class="text-gray-800 text-xs list-disc ml-4 space-y-0.5">
+                        <li>Quizzes, revisão espaçada e simuladores de tecnologia, com lint, tipos e testes no CI</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-lg text-primary border-b-2 border-gray-200 pb-1 mb-2 mt-3 font-bold">
+                    Experiência Profissional</h2>
+
+                <div class="mb-1.5">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-sm font-bold text-secondary">Suporte Técnico · <span class="font-medium text-gray-600 italic">Dexian Brasil</span></h3>
+                        <span class="text-xs text-accent font-medium">2021 - 2025</span>
+                    </div>
+                    <p class="text-gray-800 text-xs">Equipamentos Cisco e Dell, Azure AD, monitoramento SolarWinds e chamados com SLA.</p>
+                </div>
+
+                <div class="mb-1.5">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-sm font-bold text-secondary">Suporte Técnico · <span class="font-medium text-gray-600 italic">Solid Tecnologia</span></h3>
+                        <span class="text-xs text-accent font-medium">2020 - 2021</span>
+                    </div>
+                    <p class="text-gray-800 text-xs">Servidores Windows Server e Linux, Active Directory, GPO, firewall pfSense, DHCP e DNS.</p>
+                </div>
+
+                <div class="mb-1.5">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-sm font-bold text-secondary">Analista SD-WAN · <span class="font-medium text-gray-600 italic">Ericsson</span></h3>
+                        <span class="text-xs text-accent font-medium">2017 - 2019</span>
+                    </div>
+                    <p class="text-gray-800 text-xs">Migração de agências bancárias para SD-WAN e <strong>automação</strong> de roteadores Cisco com scripts.</p>
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-sm font-bold text-secondary">Analista de Redes N2 · <span class="font-medium text-gray-600 italic">Atento Brasil</span></h3>
+                        <span class="text-xs text-accent font-medium">2016 - 2017</span>
+                    </div>
+                    <p class="text-gray-800 text-xs">Tickets de alta prioridade para a Telefônica Brasil e configuração de switches Cisco L2/L3.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-lg text-primary border-b-2 border-gray-200 pb-1 mb-2 mt-3 font-bold">Formação & Certificações</h2>
+                <div class="grid grid-cols-2 gap-x-6 gap-y-1 mb-1.5">
+                    <div>
+                        <h3 class="text-sm font-bold text-secondary">Análise e Desenvolvimento de Sistemas</h3>
+                        <h4 class="text-xs font-medium text-gray-600 italic">Estácio de Sá · 2025 - Em andamento</h4>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-bold text-secondary">Redes de Computadores</h3>
+                        <h4 class="text-xs font-medium text-gray-600 italic">Uninove · 2023 - 2025</h4>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-700">
+                    <strong>Cursos (Udemy):</strong> AWS Certified Cloud (80h, 2025) • Microsoft AZ-900 (2024) •
+                    Google Associate Cloud Engineer (2024) • Fortigate NSE4 (2024) • CCNA 200-301 (2024)
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
