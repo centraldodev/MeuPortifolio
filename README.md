@@ -2,7 +2,7 @@
 
 Portfólio pessoal de desenvolvedor web e mobile, com projetos, habilidades, trajetória e currículo.
 
-**Acesse:** https://n2ilva.github.io/MeuPortifolio/
+**Acesse:** https://centraldodev.github.io/MeuPortifolio/
 
 ![Prévia do portfólio](app/opengraph-image.png)
 

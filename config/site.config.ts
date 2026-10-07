@@ -1,7 +1,7 @@
 import { projetos } from "../data/projects";
 
 // Configurações do Perfil
-export const siteUrl = "https://n2ilva.github.io/MeuPortifolio";
+export const siteUrl = "https://centraldodev.github.io/MeuPortifolio";
 
 export const profile = {
     name: "Natanael Ramos",
