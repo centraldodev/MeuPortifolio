@@ -1,4 +1,5 @@
 import { Tecnologia } from "../../data/technologies";
+import TechIcon from "./TechIcon";
 
 interface TechCardProps {
     tech: Tecnologia;
@@ -18,33 +19,39 @@ export default function TechCard({
     onMouseLeave
 }: TechCardProps) {
     const isWordmarkIcon = tech.icone.includes("wordmark");
-    const techSlug = tech.nome
-        .toLowerCase()
-        .replace(/\./g, "")
-        .replace(/\+/g, "plus")
-        .replace(/\s+/g, "-");
-
     return (
         <div
-            className={`tech-card tech-color-${techSlug} ${isActive ? "active" : ""}`}
+            className={`tech-card ${isActive ? "active" : ""}`}
+            style={{ "--tech-color": tech.cor } as React.CSSProperties}
             onClick={onClick}
+            onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onClick();
+                }
+            }}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            role="button"
+            tabIndex={0}
+            aria-expanded={isDescriptionVisible}
         >
             <div className="tech-icon-wrapper">
-                <i
-                    className={`${tech.icone} tech-icon tech-icon-colored ${isWordmarkIcon ? "tech-icon-wordmark" : ""}`}
-                ></i>
+                <TechIcon
+                    icone={tech.icone}
+                    className={`tech-icon tech-icon-colored ${isWordmarkIcon ? "tech-icon-wordmark" : ""}`}
+                />
             </div>
 
-            <h4 className="tech-nome">{tech.nome}</h4>
+            <h3 className="tech-nome">{tech.nome}</h3>
 
             <div className={`tech-tooltip ${isActive ? "visible" : ""}`}>
                 <div className="tooltip-content">
                     <div className="tooltip-header">
-                        <i
-                            className={`${tech.icone} tooltip-icon-colored ${isWordmarkIcon ? "tooltip-icon-wordmark" : ""}`}
-                        ></i>
+                        <TechIcon
+                            icone={tech.icone}
+                            className={`tooltip-icon tooltip-icon-colored ${isWordmarkIcon ? "tooltip-icon-wordmark" : ""}`}
+                        />
                         <span>{tech.nome}</span>
                     </div>
                     <p>{tech.descricao}</p>

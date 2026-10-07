@@ -19,15 +19,15 @@ const mensagemInicial: Comando = {
         <div className="welcome-message">
             <pre className="ascii-art">
 {`
-  _   _       _                         _   ____  _ _            
- | \\ | | __ _| |_ __ _ _ __   __ _  ___| | / ___|(_) |_   ____ _ 
- |  \\| |/ _\` | __/ _\` | '_ \\ / _\` |/ _ \\ | \\___ \\| | \\ \\ / / _\` |
- | |\\  | (_| | || (_| | | | | (_| |  __/ |  ___) | | |\\ V / (_| |
- |_| \\_|\\__,_|\\__\\__,_|_| |_|\\__,_|\\___|_| |____/|_|_| \\_/ \\__,_|
+  _   _       _                         _    ____                           
+ | \\ | | __ _| |_ __ _ _ __   __ _  ___| |  |  _ \\ __ _ _ __ ___   ___  ___ 
+ |  \\| |/ _\` | __/ _\` | '_ \\ / _\` |/ _ \\ |  | |_) / _\` | '_ \` _ \\ / _ \\/ __|
+ | |\\  | (_| | || (_| | | | | (_| |  __/ |  |  _ < (_| | | | | | | (_) \\__ \\ 
+ |_| \\_|\\__,_|\\__\\__,_|_| |_|\\__,_|\\___|_|  |_| \\_\\__,_|_| |_| |_|\\___/|___/
 `}
             </pre>
             <p className="welcome-text">
-                <span className="highlight">Desenvolvedor Full Stack</span> | Goiânia-GO, Brasil
+                <span className="highlight">Desenvolvedor Web & Mobile</span> | Goiânia-GO, Brasil
             </p>
             <p className="welcome-hint">
                 Digite <span className="cmd-highlight">help</span> para ver os comandos disponíveis
@@ -211,7 +211,6 @@ export default function ContactPage() {
                                 onChange={(e) => setInputAtual(e.target.value)}
                                 onKeyDown={handleKeyDown}
                                 className="terminal-input"
-                                autoFocus
                                 spellCheck={false}
                                 placeholder="Digite um comando..."
                                 aria-label="Terminal de comandos"

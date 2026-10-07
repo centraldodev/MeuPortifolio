@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 
-import { roles } from "../../config/site.config";
+import { roles, profile, experience } from "../../config/site.config";
+import Link from "next/link";
+import { getImagePath } from "../../utils/helpers";
 
 export default function HomeHeader() {
     const [roleIndex, setRoleIndex] = useState(0);
@@ -10,24 +12,21 @@ export default function HomeHeader() {
 
     useEffect(() => {
         const currentRole = roles[roleIndex];
-        const typeSpeed = isDeleting ? 50 : 100;
+        const isComplete = !isDeleting && displayText === currentRole;
+        const delay = isComplete ? 2000 : isDeleting ? 50 : 100;
 
         const timeout = setTimeout(() => {
-            if (!isDeleting) {
-                if (displayText.length < currentRole.length) {
-                    setDisplayText(currentRole.slice(0, displayText.length + 1));
-                } else {
-                    setTimeout(() => setIsDeleting(true), 2000);
-                }
+            if (isComplete) {
+                setIsDeleting(true);
+            } else if (!isDeleting) {
+                setDisplayText(currentRole.slice(0, displayText.length + 1));
+            } else if (displayText.length > 0) {
+                setDisplayText(currentRole.slice(0, displayText.length - 1));
             } else {
-                if (displayText.length > 0) {
-                    setDisplayText(currentRole.slice(0, displayText.length - 1));
-                } else {
-                    setIsDeleting(false);
-                    setRoleIndex((prev) => (prev + 1) % roles.length);
-                }
+                setIsDeleting(false);
+                setRoleIndex((prev) => (prev + 1) % roles.length);
             }
-        }, typeSpeed);
+        }, delay);
 
         return () => clearTimeout(timeout);
     }, [displayText, isDeleting, roleIndex]);
@@ -42,7 +41,7 @@ export default function HomeHeader() {
 
                 <h1 className="hero-name">
                     Natanael Santos
-                    <span className="name-highlight">Da Silva Ramos</span>
+                    <span className="name-highlight">da Silva Ramos</span>
                 </h1>
 
                 <div className="hero-role">
@@ -53,11 +52,30 @@ export default function HomeHeader() {
                 </div>
 
                 <p className="hero-description">
-                    Analista de infraestrutura de TI com <strong>7 anos de experiência em redes e administração de ambientes corporativos</strong>,
-                    com atuação em configuração e testes de equipamentos Cisco L2/L3, Fortinet, MikroTik, Ubiquiti e telefonia IP,
-                    além de administração de servidores Windows e Linux, experiência prática com Microsoft Azure e Microsoft 365,
-                    ampla vivência em virtualização com VMware e Hyper-V e atuação orientada por boas práticas de ITIL.
+                    Desenvolvo aplicações <strong>web e mobile</strong> com React, Next.js, React Native e Node.js,
+                    da interface ao deploy. Tenho apps publicados, um projeto em produção para cliente
+                    e projetos com IA e Python.
                 </p>
+                <p className="hero-description">
+                    Antes do código, foram <strong>{experience.infraYears} anos em infraestrutura de TI e redes</strong>:
+                    uma base sólida em Linux, cloud, segurança e ambientes de produção que levo para cada projeto.
+                </p>
+
+                <div className="hero-cta">
+                    <Link href="/projetos" className="btn-primary">
+                        <i className="bi bi-folder-fill"></i>
+                        Ver projetos
+                    </Link>
+                    <a
+                        href={getImagePath(profile.resumeUrl)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-secondary"
+                    >
+                        <i className="bi bi-download"></i>
+                        Baixar currículo
+                    </a>
+                </div>
             </div>
 
             <div className="hero-visual">
@@ -70,12 +88,10 @@ export default function HomeHeader() {
                     </div>
                     <pre className="code-content">
 {`const developer = {
-  nome: "Natanael Santos Da Silva Ramos",
-  idade: "30 anos",
-  cidade: "Goiânia-GO",
-    infraestrutura: "7 anos",
-  desenvolvimento: "1 ano",
-  status: "Disponível"
+  nome: "${profile.name}",
+  cargo: "${profile.role}",
+  cidade: "${profile.city}",
+  status: "${profile.status}"
 };`}
                     </pre>
                 </div>

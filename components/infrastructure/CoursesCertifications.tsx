@@ -1,4 +1,4 @@
-"use client";
+import { cursos } from "../../data/trajetoria";
 
 export default function CoursesCertifications() {
     return (
@@ -7,58 +7,20 @@ export default function CoursesCertifications() {
                 <i className="bi bi-patch-check-fill"></i>
                 Cursos & Certificações
             </h2>
-            
+
             <div className="cursos-grid">
-                <div className="curso-card">
-                    <div className="curso-icon">
-                        <i className="bi bi-cloud-fill course-icon-aws"></i>
+                {cursos.map((curso) => (
+                    <div key={curso.nome} className="curso-card">
+                        <div className="curso-icon">
+                            <i className={`bi ${curso.icone} ${curso.classeIcone}`}></i>
+                        </div>
+                        <div className="curso-info">
+                            <h3>{curso.nome}</h3>
+                            <span className="curso-duracao">{curso.duracao}</span>
+                            <span className="curso-plataforma">{curso.plataforma}</span>
+                        </div>
                     </div>
-                    <div className="curso-info">
-                        <h4>Amazon AWS Certified Cloud</h4>
-                        <span className="curso-duracao">80h - 2025</span>
-                        <span className="curso-plataforma">Udemy</span>
-                    </div>
-                </div>
-                <div className="curso-card">
-                    <div className="curso-icon">
-                        <i className="bi bi-microsoft course-icon-microsoft"></i>
-                    </div>
-                    <div className="curso-info">
-                        <h4>Microsoft AZ-900</h4>
-                        <span className="curso-duracao">5h - 2024</span>
-                        <span className="curso-plataforma">Udemy</span>
-                    </div>
-                </div>
-                <div className="curso-card">
-                    <div className="curso-icon">
-                        <i className="bi bi-google course-icon-google"></i>
-                    </div>
-                    <div className="curso-info">
-                        <h4>Google Associate Cloud Engineer</h4>
-                        <span className="curso-duracao">9h - 2024</span>
-                        <span className="curso-plataforma">Udemy</span>
-                    </div>
-                </div>
-                <div className="curso-card">
-                    <div className="curso-icon">
-                        <i className="bi bi-shield-lock-fill course-icon-fortigate"></i>
-                    </div>
-                    <div className="curso-info">
-                        <h4>Fortigate Firewall NSE4</h4>
-                        <span className="curso-duracao">8h - 2024</span>
-                        <span className="curso-plataforma">Udemy</span>
-                    </div>
-                </div>
-                <div className="curso-card">
-                    <div className="curso-icon">
-                        <i className="bi bi-hdd-network-fill course-icon-cisco"></i>
-                    </div>
-                    <div className="curso-info">
-                        <h4>CCNA 200-301</h4>
-                        <span className="curso-duracao">80h - 2024</span>
-                        <span className="curso-plataforma">Udemy</span>
-                    </div>
-                </div>
+                ))}
             </div>
         </section>
     );

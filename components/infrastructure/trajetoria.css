@@ -1,20 +1,9 @@
-/* Container da página de infraestrutura */
-.page-container {
-    padding-top: 26px;
-}
-
-.intro-text {
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
+/* Página Trajetória */
 
 .infra-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 3rem;
 }
 
 .infra-card {
@@ -166,7 +155,7 @@
     flex: 1;
 }
 
-.formacao-info h4 {
+.formacao-info h3 {
     font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
@@ -215,19 +204,6 @@
     margin-top: 3rem;
 }
 
-.section-subtitle {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.section-subtitle i {
-    color: var(--accent-color);
-}
 
 /* Timeline */
 .timeline {
@@ -273,7 +249,7 @@
     border: 1px solid var(--border-color);
 }
 
-.timeline-content h4 {
+.timeline-content h3 {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
@@ -320,6 +296,31 @@
     color: var(--text-secondary);
     margin: 0;
     line-height: 1.6;
+}
+
+/* Seções */
+.diferenciais-section,
+.infra-section {
+    margin-top: 3rem;
+}
+
+/* Diferenciais (infra aplicada ao desenvolvimento) */
+.diferenciais-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.diferencial-card {
+    align-items: flex-start;
+}
+
+.diferencial-card .curso-icon {
+    color: var(--color-primary);
+}
+
+.diferencial-card p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* Seção de Cursos */
@@ -372,7 +373,7 @@
     flex: 1;
 }
 
-.curso-info h4 {
+.curso-info h3 {
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--text-primary);
@@ -407,7 +408,8 @@
         justify-content: center;
     }
     
-    .cursos-grid {
+    .cursos-grid,
+    .diferenciais-grid {
         grid-template-columns: 1fr;
     }
 }

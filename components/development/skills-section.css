@@ -1,12 +1,5 @@
 /* Linguagens Page Styles */
 
-.intro-text {
-    font-size: 1.1rem;
-    color: var(--color-text-secondary);
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
 .categoria-section {
     margin-bottom: 2.5rem;
 }
@@ -45,30 +38,6 @@
     overflow: visible;
 }
 
-.tech-card.tech-color-javascript { --tech-color: #F7DF1E; }
-.tech-card.tech-color-typescript { --tech-color: #3178C6; }
-.tech-card.tech-color-nodejs { --tech-color: #339933; }
-.tech-card.tech-color-nextjs { --tech-color: #ffffff; }
-.tech-card.tech-color-react { --tech-color: #61DAFB; }
-.tech-card.tech-color-react-native { --tech-color: #61DAFB; }
-.tech-card.tech-color-tailwind-css { --tech-color: #06B6D4; }
-.tech-card.tech-color-bootstrap { --tech-color: #563D7C; }
-.tech-card.tech-color-firebase { --tech-color: #FFCA28; }
-.tech-card.tech-color-supabase { --tech-color: #3ECF8E; }
-.tech-card.tech-color-mongodb { --tech-color: #47A248; }
-.tech-card.tech-color-postgresql { --tech-color: #336791; }
-.tech-card.tech-color-docker { --tech-color: #2496ED; }
-.tech-card.tech-color-git { --tech-color: #F05032; }
-.tech-card.tech-color-github { --tech-color: #181717; }
-.tech-card.tech-color-stripe { --tech-color: #635BFF; }
-.tech-card.tech-color-aws-ec2 { --tech-color: #FF9900; }
-.tech-card.tech-color-aws-s3 { --tech-color: #FF9900; }
-.tech-card.tech-color-aws-aurora { --tech-color: #FF9900; }
-.tech-card.tech-color-aws-dynamodb { --tech-color: #FF9900; }
-.tech-card.tech-color-aws-lambda { --tech-color: #FF9900; }
-.tech-card.tech-color-express { --tech-color: #ffffff; }
-.tech-card.tech-color-kotlin { --tech-color: #7F52FF; }
-.tech-card.tech-color-jetpack-compose { --tech-color: #4285F4; }
 
 .tech-card:hover {
     background: rgba(255, 255, 255, 0.08);
@@ -181,11 +150,26 @@
     border-bottom: 1px solid var(--color-border-light);
 }
 
-.tooltip-header i {
+/* Ícones SVG (devicon) pintados com a cor do texto */
+.tech-svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.tooltip-header i,
+.tooltip-header .tooltip-icon {
     font-size: 1.25rem;
 }
 
-.tooltip-header i.tooltip-icon-wordmark {
+.tooltip-header .tooltip-icon-wordmark {
     font-size: 0.95rem;
 }
 

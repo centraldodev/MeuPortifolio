@@ -24,10 +24,10 @@ export default function TechCategorySection({
 }: TechCategorySectionProps) {
     return (
         <div className="categoria-section">
-            <h3 className="categoria-titulo">
+            <h2 className="categoria-titulo">
                 <i className={`bi ${icone} me-2`}></i>
                 {titulo}
-            </h3>
+            </h2>
 
             <div className="tech-grid">
                 {tecnologias.map((tech) => (

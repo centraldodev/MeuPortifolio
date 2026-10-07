@@ -22,11 +22,6 @@ export default function SkillsSection() {
 
     return (
         <section className="linguagens-section">
-            <h2 className="section-subtitle">
-                <i className="bi bi-code-slash"></i>
-                Linguagens & Tecnologias
-            </h2>
-
             {(Object.keys(categorias) as Array<keyof typeof categorias>).map((categoriaKey) => (
                 <TechCategorySection
                     key={categoriaKey}

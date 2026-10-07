@@ -1,10 +1,5 @@
 /* Contato Page Styles - Terminal Theme */
 
-/* Container da página */
-.page-container {
-    padding-top: 26px;
-}
-
 /* Terminal Container */
 .terminal-container {
     background: #0d0d0d;
@@ -13,7 +8,7 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
                 0 0 40px rgba(0, 255, 0, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-family: var(--font-mono), 'Consolas', monospace;
     margin-bottom: 2rem;
 }
 

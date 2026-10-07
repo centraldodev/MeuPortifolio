@@ -2,3 +2,4 @@
 export * from './technologies';
 export * from './projects';
 export * from './contacts';
+export * from './trajetoria';
