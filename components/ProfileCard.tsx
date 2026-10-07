@@ -5,16 +5,11 @@ import { profile } from "../config/site.config";
 // Importação centralizada
 import { getImagePath } from "../utils/helpers";
 
-interface ProfileCardProps {
-    onClick: React.MouseEventHandler<HTMLAnchorElement>;
-}
-
-export default function ProfileCard({ onClick }: ProfileCardProps) {
+export default function ProfileCard() {
     return (
         <Link
             href="/"
             className="d-flex flex-column align-items-center align-items-sm-start pb-4 mb-3 w-100 text-white text-decoration-none profile-section"
-            onClick={onClick}
         >
             <div className="mb-3 d-flex align-items-center justify-content-center overflow-hidden profile-photo">
                 <Image
@@ -33,7 +28,7 @@ export default function ProfileCard({ onClick }: ProfileCardProps) {
                 {profile.role}
             </small>
             <small className="d-none d-sm-inline profile-subtitle">
-                {profile.role2}
+                {profile.stack}
             </small>
         </Link>
     );

@@ -18,6 +18,14 @@
   --color-border-light: rgba(255, 255, 255, 0.1);
   --color-border-medium: rgba(255, 255, 255, 0.2);
 
+  /* Aliases usados pelas páginas internas */
+  --text-primary: var(--color-text-white);
+  --text-secondary: var(--color-text-secondary);
+  --accent-color: var(--color-primary);
+  --border-color: var(--color-border-light);
+  --bg-primary: var(--color-bg-dark);
+  --bg-secondary: rgba(255, 255, 255, 0.03);
+
   /* Sombras */
   --shadow-sidebar: 4px 0 15px rgba(0, 0, 0, 0.3);
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -177,6 +185,75 @@
 }
 
 /* ========================================
+   ELEMENTOS COMUNS DAS PÁGINAS
+   ======================================== */
+
+.page-container {
+  padding-top: 26px;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.section-subtitle i {
+  color: var(--accent-color);
+}
+
+.not-found {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.not-found-codigo {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.not-found .intro-text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Link "pular para o conteúdo" (aparece só ao navegar pelo teclado) */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ========================================
    BOTÃO DE DOWNLOAD
    ======================================== */
 
@@ -193,13 +270,6 @@
   transform: translateY(-2px);
 }
 
-.download-nav-link {
-  color: var(--color-primary) !important;
-}
-
-.download-nav-link:hover {
-  background: rgba(13, 110, 253, 0.2) !important;
-}
 
 /* ========================================
    MENU MOBILE (RODAPÉ)
@@ -317,5 +387,40 @@
 
   .mobile-nav .nav-menu-link i {
     font-size: 1.2rem !important;
+  }
+}
+
+/* ========================================
+   ENTRADA AO ROLAR (telas pequenas)
+   Cards de projeto e de experiência surgem conforme entram na tela.
+   Usa animação ligada à rolagem (sem JavaScript); navegadores sem suporte
+   e quem pediu menos movimento veem os cards normalmente.
+   ======================================== */
+
+@keyframes surgir-ao-rolar {
+  from {
+    opacity: 0;
+    translate: 0 28px;
+    scale: 0.97;
+  }
+  /* segura o card bem transparente na primeira metade da entrada */
+  55% {
+    opacity: 0.15;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1;
+  }
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .projeto-card,
+    .experience-card {
+      animation: surgir-ao-rolar linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 65%;
+    }
   }
 }
