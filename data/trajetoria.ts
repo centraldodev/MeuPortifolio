@@ -31,6 +31,8 @@ export interface Curso {
     plataforma: string;
     icone: string;
     classeIcone: string;
+    certificado?: string;
+    conteudos?: { titulo: string; descricao: string }[];
 }
 
 // Linha do tempo (mais recente primeiro)
@@ -128,6 +130,22 @@ export const formacoes: Formacao[] = [
 ];
 
 export const cursos: Curso[] = [
+    {
+        nome: "Programador Web",
+        duracao: "200h - Concluído em outubro de 2026",
+        plataforma: "Instituto Federal do Rio Grande do Sul (IFRS)",
+        icone: "bi-code-slash",
+        classeIcone: "course-icon-web",
+        certificado: "/certificados/Programador_Web-Certificado.pdf",
+        conteudos: [
+            { titulo: "HTML", descricao: "Estrutura de páginas, links, listas, imagens, áudio e vídeo, tabelas, formulários e acessibilidade." },
+            { titulo: "CSS", descricao: "Seletores, classes e IDs, formatação de textos e elementos, posicionamento e layouts responsivos com media queries." },
+            { titulo: "Lógica de Programação", descricao: "Variáveis, entrada e saída de dados, operadores, condicionais, laços de repetição, vetores, matrizes, funções e parâmetros com Portugol Studio." },
+            { titulo: "JavaScript", descricao: "Operações, laços de repetição, eventos, validação de formulários e uso de bibliotecas." },
+            { titulo: "Banco de Dados SQL e NoSQL", descricao: "Conceitos de bancos de dados e SGBDs, modelos e modelagem, relacionamentos, chaves, integridade referencial e normalização." },
+            { titulo: "Projeto de Sistemas Web", descricao: "Levantamento, análise e validação de requisitos, modelagem de sistemas, UML, padrões de projeto e documentação." }
+        ]
+    },
     { nome: "Amazon AWS Certified Cloud", duracao: "80h - 2025", plataforma: "Udemy", icone: "bi-cloud-fill", classeIcone: "course-icon-aws" },
     { nome: "Microsoft AZ-900", duracao: "5h - 2024", plataforma: "Udemy", icone: "bi-microsoft", classeIcone: "course-icon-microsoft" },
     { nome: "Google Associate Cloud Engineer", duracao: "9h - 2024", plataforma: "Udemy", icone: "bi-google", classeIcone: "course-icon-google" },

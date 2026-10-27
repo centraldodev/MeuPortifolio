@@ -393,6 +393,51 @@
     margin-top: 0.15rem;
 }
 
+/* Certificado de desenvolvimento web */
+.curso-card-destaque {
+    grid-column: 1 / -1;
+    align-items: flex-start;
+}
+
+.curso-icon .course-icon-web { color: var(--accent-color); }
+
+.curso-conteudos {
+    margin-top: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.curso-conteudos summary {
+    cursor: pointer;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.curso-conteudos ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.curso-conteudos li + li { margin-top: 0.4rem; }
+
+.curso-certificado {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+
+.curso-certificado:focus-visible,
+.curso-conteudos summary:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .infra-grid {
