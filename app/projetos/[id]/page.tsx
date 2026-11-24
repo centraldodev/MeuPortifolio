@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projetos } from "../../../data/projects";
 import { paginaMetadata } from "../../../utils/metadata";
-import ProjectDetail from "../../../components/development/ProjectDetail";
+import ProjectDetail from "../../../components/projetos/ProjectDetail";
 
 export const dynamicParams = false;
 

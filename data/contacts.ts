@@ -22,7 +22,7 @@ export const contatos: Record<string, Contato> = {
         valor: "github.com/n2ilva",
         link: "https://github.com/n2ilva",
         icone: "bi-github",
-        cor: "#ffffff"
+        cor: "#24292f"
     },
     whatsapp: {
         valor: "+55 62 99963-3100",
@@ -37,15 +37,3 @@ export const contatos: Record<string, Contato> = {
         cor: "#FF6B6B"
     }
 };
-
-// Comandos disponíveis no terminal de contato
-export const comandosDisponiveis = [
-    { cmd: "help", desc: "Lista todos os comandos disponíveis" },
-    { cmd: "email", desc: "Exibe meu endereço de e-mail" },
-    { cmd: "linkedin", desc: "Link para meu perfil LinkedIn" },
-    { cmd: "github", desc: "Link para meu perfil GitHub" },
-    { cmd: "whatsapp", desc: "Inicia uma conversa no WhatsApp" },
-    { cmd: "location", desc: "Exibe minha localização" },
-    { cmd: "all", desc: "Exibe todas as informações de contato" },
-    { cmd: "clear", desc: "Limpa o terminal" },
-];

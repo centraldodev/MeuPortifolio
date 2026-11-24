@@ -25,54 +25,15 @@ export const experience = {
     projectCount: projetos.length
 };
 
-// Roles para animação na Home
-export const roles = [
-    "Desenvolvedor Web",
-    "Desenvolvedor Mobile",
-    "Desenvolvedor Full Stack",
-];
-
-// Configurações do Menu de Navegação
+// Seções da página única (o id é a âncora de cada seção)
 export interface MenuItem {
     label: string;
-    icon: string;
-    href: string;
+    id: string;
 }
 
 export const menuItems: MenuItem[] = [
-    { label: "Início", icon: "bi-house-fill", href: "/" },
-    { label: "Projetos", icon: "bi-folder-fill", href: "/projetos" },
-    { label: "Habilidades", icon: "bi-code-slash", href: "/habilidades" },
-    { label: "Trajetória", icon: "bi-signpost-split-fill", href: "/trajetoria" },
-    { label: "Contato", icon: "bi-envelope-fill", href: "/contato" }
-];
-
-// Experiências detalhadas (Home)
-export const experiencias: {
-    area: string;
-    tempo: string;
-    icone: string;
-    cor: string;
-    descricao: string;
-    tags: string[];
-    href: string;
-}[] = [
-    {
-        area: "Desenvolvimento Web & Mobile",
-        tempo: `${experience.devYears}+ ano`,
-        icone: "bi-code-slash",
-        cor: "#22c55e",
-        descricao: "Apps web, mobile e desktop, do front-end ao deploy, incluindo um projeto em produção para cliente, com pagamentos integrados.",
-        tags: ["TypeScript", "React", "Next.js", "React Native", "Expo", "Node.js", "Express", "Python", "Kotlin", "FastAPI", "Firebase", "Supabase", "MongoDB", "PostgreSQL", "Docker", "Git"],
-        href: "/projetos"
-    },
-    {
-        area: "Infraestrutura de TI & Redes",
-        tempo: `${experience.infraYears} anos`,
-        icone: "bi-hdd-network-fill",
-        cor: "#6366f1",
-        descricao: "Base que levo para o desenvolvimento: Linux, redes, cloud, segurança e ambientes de produção.",
-        tags: ["Linux", "Windows Server", "Redes (Cisco L2/L3)", "Azure", "AWS", "VMware", "Fortinet", "Zabbix"],
-        href: "/trajetoria"
-    }
+    { label: "Projetos", id: "projetos" },
+    { label: "Habilidades", id: "habilidades" },
+    { label: "Trajetória", id: "trajetoria" },
+    { label: "Contato", id: "contato" }
 ];

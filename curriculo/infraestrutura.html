@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natanael Ramos - Analista de Infraestrutura e Redes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'roboto': ['Roboto', 'sans-serif']
+                    },
+                    colors: {
+                        'primary': '#2c3e50',
+                        'secondary': '#34495e',
+                        'accent': '#3498db',
+                        'sidebar-bg': '#f4f6f7'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-roboto bg-white text-gray-800 flex justify-center m-0 p-0">
+    <div class="flex w-[210mm] h-[297mm] mx-auto overflow-hidden">
+        <aside class="w-[31%] bg-sidebar-bg text-primary px-5 py-7 flex flex-col gap-5">
+            <div class="text-center">
+                <div class="w-28 h-28 mx-auto mb-3 rounded-full overflow-hidden border-4 border-white shadow-md">
+                    <img src="foto.jpg" alt="Foto de Perfil" class="w-full h-full object-cover">
+                </div>
+                <h1 class="text-xl text-primary mb-1 uppercase tracking-wide leading-tight font-bold">Natanael Ramos</h1>
+                <h2 class="text-sm text-accent font-medium">Analista de Infraestrutura e Redes</h2>
+            </div>
+
+            <div>
+                <h3 class="text-sm uppercase tracking-wider border-b-2 border-accent pb-1 mb-2.5 text-primary font-bold">Contato</h3>
+                <ul class="list-none space-y-2 text-xs">
+                    <li class="flex items-center"><i class="fas fa-phone w-5 text-accent mr-1.5"></i><a href="tel:+5562999633100">(62) 99963-3100</a></li>
+                    <li class="flex items-center"><i class="fas fa-envelope w-5 text-accent mr-1.5"></i><a href="mailto:natanaelsantos_silva@outlook.com">natanaelsantos_silva@outlook.com</a></li>
+                    <li class="flex items-center"><i class="fas fa-map-marker-alt w-5 text-accent mr-1.5"></i><span>Goiânia, GO</span></li>
+                    <li class="flex items-center"><i class="fab fa-linkedin w-5 text-accent mr-1.5"></i><a href="https://linkedin.com/in/natanael2ilva">linkedin.com/in/natanael2ilva</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-sm uppercase tracking-wider border-b-2 border-accent pb-1 mb-2.5 text-primary font-bold">Conhecimentos</h3>
+                <div class="space-y-2 text-xs">
+                    <div>
+                        <p class="font-semibold">Redes</p>
+                        <p class="text-gray-700">Cisco L2/L3 • SD-WAN • VLAN • VRF • BGP • OSPF • MPLS • VPN IPsec • DHCP • DNS • Voz IP</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Servidores &amp; Virtualização</p>
+                        <p class="text-gray-700">Windows Server • Linux • Active Directory • Azure AD • GPO • VMware • Hyper-V</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Segurança &amp; Monitoramento</p>
+                        <p class="text-gray-700">Fortigate • pfSense • Zabbix • SolarWinds</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Cloud</p>
+                        <p class="text-gray-700">AWS • Azure • Microsoft 365</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Gestão &amp; Automação</p>
+                        <p class="text-gray-700">ITIL • ServiceNow • BMC Remedy • Shell Script • Bash</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-sm uppercase tracking-wider border-b-2 border-accent pb-1 mb-2.5 text-primary font-bold">Outros</h3>
+                <ul class="list-none space-y-1.5 text-xs">
+                    <li class="flex justify-between"><span>Inglês</span><span class="font-semibold text-gray-600">Técnico</span></li>
+                    <li class="flex justify-between"><span>Espanhol</span><span class="font-semibold text-gray-600">Básico</span></li>
+                    <li class="flex justify-between"><span>Contratação</span><span class="font-semibold text-gray-600">CLT ou PJ</span></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="w-[69%] px-7 py-7">
+            <section>
+                <h2 class="text-base uppercase tracking-wider text-primary border-b-2 border-gray-200 pb-1 mb-2 font-bold">Resumo</h2>
+                <p class="text-gray-800 text-xs leading-relaxed">
+                    <strong>8 anos em infraestrutura de TI e redes</strong>, em operações de grande porte como Ericsson e
+                    Telefônica Brasil. Experiência com <strong>redes Cisco e SD-WAN</strong>, servidores Windows e Linux,
+                    Active Directory, firewalls, virtualização e cloud, com atendimento orientado por ITIL e SLA.
+                    Também programo, o que me ajuda a <strong>automatizar tarefas</strong> e entender as aplicações que a infraestrutura sustenta.
+                </p>
+            </section>
+
+            <section class="mt-5">
+                <h2 class="text-base uppercase tracking-wider text-primary border-b-2 border-gray-200 pb-1 mb-2.5 font-bold">Experiência</h2>
+
+                <div class="mb-3">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-sm font-bold text-secondary">Suporte Técnico · <span class="font-medium text-gray-600">Dexian Brasil</span></h3>
+                        <span class="text-xs text-accent font-medium">2021 - 2025</span>
+                    </div>
+                    <p class="text-gray-800 text-xs leading-relaxed">Equipamentos Cisco e Dell, Azure AD, monitoramento com SolarWinds e chamados com SLA.</p>
+                </div>
+
+                <div class="mb-3">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-sm font-bold text-secondary">Suporte Técnico · <span class="font-medium text-gray-600">Solid Tecnologia</span></h3>
+                        <span class="text-xs text-accent font-medium">2020 - 2021</span>
+                    </div>
+                    <p class="text-gray-800 text-xs leading-relaxed">Servidores Windows Server e Linux, Active Directory, GPO, firewall pfSense, DHCP e DNS.</p>
+                </div>
+
+                <div class="mb-3">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-sm font-bold text-secondary">Analista SD-WAN · <span class="font-medium text-gray-600">Ericsson</span></h3>
+                        <span class="text-xs text-accent font-medium">2017 - 2019</span>
+                    </div>
+                    <p class="text-gray-800 text-xs leading-relaxed">Migração de agências bancárias para SD-WAN e <strong>automação da configuração de roteadores Cisco com scripts</strong>.</p>
+                </div>
+
+                <div class="mb-3">
+                    <div class="flex justify-between items-baseline">
+                        <h3 class="text-sm font-bold text-secondary">Analista de Redes N2 · <span class="font-medium text-gray-600">Atento Brasil</span></h3>
+                        <span class="text-xs text-accent font-medium">2016 - 2017</span>
+                    </div>
+                    <p class="text-gray-800 text-xs leading-relaxed">Tickets de alta prioridade para a Telefônica Brasil e configuração de switches Cisco L2/L3.</p>
+                </div>
+
+                <p class="text-xs text-gray-800 leading-relaxed">
+                    <strong>Ao longo da carreira:</strong> configuração e testes de equipamentos Cisco, Fortinet, MikroTik,
+                    Ubiquiti e telefonia IP; virtualização com VMware e Hyper-V; monitoramento com Zabbix e SolarWinds;
+                    administração de Microsoft 365 e Azure; atendimento ITIL com BMC Remedy e ServiceNow.
+                </p>
+            </section>
+
+            <section class="mt-5">
+                <h2 class="text-base uppercase tracking-wider text-primary border-b-2 border-gray-200 pb-1 mb-2 font-bold">Formação</h2>
+                <ul class="text-xs text-gray-800 space-y-1.5">
+                    <li class="flex justify-between"><span><strong>Redes de Computadores</strong> · Uninove</span><span class="text-gray-500">2023 - 2025</span></li>
+                    <li class="flex justify-between"><span><strong>Análise e Desenvolvimento de Sistemas</strong> · Estácio</span><span class="text-gray-500">em andamento</span></li>
+                </ul>
+            </section>
+
+            <section class="mt-5">
+                <h2 class="text-base uppercase tracking-wider text-primary border-b-2 border-gray-200 pb-1 mb-2 font-bold">Cursos</h2>
+                <ul class="text-xs text-gray-800 space-y-1.5">
+                    <li class="flex justify-between"><span><strong>CCNA 200-301</strong> · Udemy</span><span class="text-gray-500">80h · 2024</span></li>
+                    <li class="flex justify-between"><span><strong>Amazon AWS Certified Cloud</strong> · Udemy</span><span class="text-gray-500">80h · 2025</span></li>
+                    <li class="flex justify-between"><span><strong>Google Associate Cloud Engineer</strong> · Udemy</span><span class="text-gray-500">9h · 2024</span></li>
+                    <li class="flex justify-between"><span><strong>Fortigate Firewall NSE4</strong> · Udemy</span><span class="text-gray-500">8h · 2024</span></li>
+                    <li class="flex justify-between"><span><strong>Microsoft AZ-900</strong> · Udemy</span><span class="text-gray-500">5h · 2024</span></li>
+                </ul>
+            </section>
+
+            <section class="mt-5">
+                <h2 class="text-base uppercase tracking-wider text-primary border-b-2 border-gray-200 pb-1 mb-2 font-bold">Diferencial: desenvolvimento</h2>
+                <p class="text-xs text-gray-800 leading-relaxed">
+                    Desde 2025 desenvolvo aplicações web e mobile com TypeScript, Node.js, Docker e GitHub Actions,
+                    com <strong>duas plataformas em produção</strong> que eu mesmo publico e mantenho.
+                    Curso de Programador Web (200h) pelo IFRS, concluído em 2026.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

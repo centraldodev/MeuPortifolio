@@ -10,17 +10,18 @@ Portfólio pessoal de desenvolvedor web e mobile, com projetos, habilidades, tra
 
 - **Next.js 16** (App Router) com exportação estática, publicado no **GitHub Pages**
 - **React 19** e **TypeScript**
-- CSS próprio por página, com o reboot do Bootstrap e utilitários enxutos ([app/utilities.css](app/utilities.css))
+- CSS próprio em um só arquivo ([app/globals.css](app/globals.css)), tema claro azul e branco, com o reboot do Bootstrap
 - Ícones: Bootstrap Icons e SVGs do Devicon
-- Fontes Inter e JetBrains Mono via `next/font`
+- Fontes Nunito e Nunito Sans via `next/font`
+- Ilustração do topo em SVG próprio, animada só com CSS
 
 ## Destaques técnicos
 
-- **Uma rota por página** (`/projetos/`, `/habilidades/`, `/trajetoria/`, `/contato/`) e uma página gerada para cada projeto (`/projetos/[id]/`) com `generateStaticParams`
+- **Página única** com seções por âncora (`#projetos`, `#habilidades`, `#trajetoria`, `#contato`), menu no topo que destaca a seção visível, e uma página gerada para cada projeto (`/projetos/[id]/`) com `generateStaticParams`
 - **Conteúdo separado do código:** projetos, tecnologias, trajetória e contatos ficam em [`data/`](data/); perfil e menu em [`config/site.config.ts`](config/site.config.ts)
 - **SEO e compartilhamento:** título, descrição e prévia (Open Graph) por página, `sitemap.xml`, favicon e página 404
 - **Acessibilidade:** navegação por teclado, link "pular para o conteúdo", rótulos nos ícones e respeito a `prefers-reduced-motion`
-- **Desempenho:** imagens em WebP, CSS carregado por página e ícones em SVG em vez de fontes de ícones (Lighthouse: 100 em acessibilidade, boas práticas e SEO)
+- **Desempenho:** imagens em WebP e ícones em SVG em vez de fontes de ícones (Lighthouse: 100 em acessibilidade, boas práticas e SEO)
 - **Currículo versionado:** o PDF é gerado a partir de [`curriculo/index.html`](curriculo/)
 - **CI/CD:** lint e build no GitHub Actions a cada push na `main`, com deploy automático no GitHub Pages
 
@@ -28,8 +29,8 @@ Portfólio pessoal de desenvolvedor web e mobile, com projetos, habilidades, tra
 
 ```text
 app/          Rotas (App Router), layout, metadados, sitemap e ícones
-components/   Componentes de cada página e o layout (barra lateral e menu mobile)
-config/       Perfil, menu e textos da home
+components/   Seções da página, projetos e layout (faixa de aviso, cabeçalho e rodapé)
+config/       Perfil e seções do menu
 data/         Projetos, tecnologias, trajetória e contatos
 curriculo/    Fonte HTML do currículo em PDF
 public/       Imagens, ícones e o PDF do currículo

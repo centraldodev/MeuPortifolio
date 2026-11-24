@@ -51,60 +51,34 @@ export const projetos: Projeto[] = [
         destaque: "Cliente real"
     },
     {
-        id: "cifra-estudio",
-        nome: "Cifra Estúdio",
-        resumo: "Transforma músicas em partitura, cifra e tablatura, separando os instrumentos com IA e mostrando tudo num instrumento virtual.",
-        descricao: "App para músicos que transforma um arquivo de áudio em partitura, cifra e tablatura sincronizadas com a música. O sistema separa cada instrumento, transcreve as notas de piano, guitarra/violão e baixo individualmente e usa essa coleta para montar os acordes, com um instrumento virtual para facilitar a leitura.",
-        plataformas: ["Web", "Mobile", "Desktop"],
-        status: "Em desenvolvimento",
-        imagem: "/projetos/cifra-estudio.webp",
+        id: "88-teclas",
+        nome: "88 Teclas - Plataforma de Piano",
+        resumo: "Plataforma de ensino de piano com aulas ao vivo em vídeo, cursos gravados, prática com teclado MIDI no navegador e marketplace que paga os professores.",
+        descricao: "Plataforma completa de ensino de piano, em produção. O aluno encontra um professor, agenda e paga a aula, tem a aula por vídeo com som de qualidade para o instrumento, estuda com cursos gravados e pratica todos os dias tocando no próprio teclado MIDI, com o site corrigindo nota a nota. Para os professores é um marketplace: cada um define agenda, preço e duração das aulas, publica cursos e recebe a sua parte automaticamente depois que a aula acontece.",
+        plataformas: ["Web"],
+        status: "Em produção",
+        imagem: "/projetos/88-teclas.png",
         imagemTipo: "icone",
-        corFundo: "#1f1a0e",
-        link: "https://windows.tail00f338.ts.net/",
-        tecnologias: ["Flutter", "Dart", "Python", "FastAPI", "PyTorch", "Supabase", "PostgreSQL", "FFmpeg"],
+        corFundo: "#111827",
+        link: "https://88teclas.com.br/",
+        tecnologias: ["TypeScript", "React", "Vite", "Node.js", "Express", "Zod", "Firebase", "Stripe", "WebRTC", "Web MIDI", "Web Audio", "Cloudflare"],
         funcionalidades: [
-            "Separação dos instrumentos: voz, guitarra, piano, baixo e bateria",
-            "Partitura, cifra e tablatura sincronizadas com o áudio",
-            "Instrumento virtual para acompanhar a leitura",
-            "Transposição em tempo real sem alterar o andamento",
-            "Importação de partituras em PDF e MusicXML",
-            "Download de cada instrumento separado"
+            "Aulas ao vivo por vídeo, com agenda por professor e reserva sem conflito de horário",
+            "Pianito: prática com teclado MIDI no navegador (escalas, acordes, leitura de partitura e ditados), com pontuação e estatísticas de erros",
+            "Partitura, cifra e piano roll sincronizados, com transposição e importação de arquivos MIDI",
+            "Cursos gravados com player protegido por marca-d'água e progresso por aula",
+            "Pagamento por cartão, Pix e boleto, cupons e reembolso automático",
+            "Áreas do professor e do administrador: agenda, alunos, materiais, aprovações e repasses"
         ],
         destaquesTecnicos: [
-            "App Flutter único para Web, Android, iOS, macOS e Windows",
-            "Backend Python com FastAPI e fila persistente de análises no Supabase/PostgreSQL",
-            "Modelos de IA (BS-RoFormer, TransKun) rodando em GPU NVIDIA com PyTorch e CUDA",
-            "Servidor de GPU busca trabalhos só por conexão de saída, sem portas expostas",
-            "Arquivos grandes enviados direto ao Storage, com login Google e cota por usuário"
+            "Sala de vídeo própria em WebRTC, com áudio estéreo a 128 kbps ajustado para piano e TURN da Cloudflare para redes restritas",
+            "Web MIDI e Web Audio para ler o teclado e tocar piano no navegador; o servidor recalcula a pontuação para evitar trapaça",
+            "Marketplace com Stripe Connect: repasse ao professor só depois da aula, webhook idempotente e regras de dinheiro cobertas por testes",
+            "Reserva de horários com transações no Firestore, sem dois alunos no mesmo horário",
+            "Banco fechado para o navegador, Firebase App Check e teste de invasão com 33 ataques barrados",
+            "Cerca de 43 mil linhas em TypeScript, 228 testes e CI com typecheck, testes, build e auditoria"
         ],
         destaque: "Destaque"
-    },
-    {
-        id: "ive",
-        nome: "Ive - Assistente Virtual",
-        resumo: "Assistente virtual por voz que controla o computador: abre apps, executa tarefas, cuida de e-mails e mensagens, também pelo celular.",
-        descricao: "Meu primeiro app voltado para desktop, com uma versão mobile. A Ive entende pedidos por voz ou texto e executa ações no computador (macOS e Windows): abrir aplicativos, automatizar tarefas, cuidar de e-mails e mensagens. Pelo celular, os pedidos são enviados para os computadores da mesma conta.",
-        plataformas: ["Desktop", "Mobile"],
-        status: "Em desenvolvimento",
-        imagem: "/projetos/ive.webp",
-        imagemTipo: "icone",
-        corFundo: "#0f1b3d",
-        tecnologias: ["Python", "TypeScript", "React Native", "Expo", "Azure", "WebSocket", "Tailscale"],
-        funcionalidades: [
-            "Comandos por voz ou texto",
-            "Automação de aplicativos no macOS e no Windows",
-            "App mobile que envia pedidos para os computadores da conta",
-            "Integração com a Agenda Familiar e o Controle Financeiro",
-            "Memória por conta e plugins",
-            "Confirmação de ações sensíveis e opção de desfazer"
-        ],
-        destaquesTecnicos: [
-            "Arquitetura que separa decisão, validação de segurança e execução no aparelho",
-            "Servidor na Azure acessado por rede privada (Tailscale/WireGuard)",
-            "Cada celular gera sua chave Ed25519 e assina as conexões com o servidor",
-            "Plugins executados em processo isolado",
-            "Testes automatizados do protocolo entre o app mobile e o desktop"
-        ]
     },
     {
         id: "controle-financeiro",
@@ -124,15 +98,13 @@ export const projetos: Projeto[] = [
             "Metas financeiras e orçamentos por categoria",
             "Grupos compartilhados com código de convite",
             "Gráficos de tendência, gastos por categoria e previsão do próximo mês",
-            "Insights do período e dicas de economia",
-            "Controle por voz pela assistente Ive: saldo, resumo do mês, contas a pagar e lançamentos"
+            "Insights do período e dicas de economia"
         ],
         destaquesTecnicos: [
             "Mesma base de código para Android e Web com Expo",
             "Firebase Auth e Firestore com regras de segurança por usuário e grupo",
             "API REST de análise de dados",
-            "Busca aproximada (fuzzy search) nas transações",
-            "Integração com a Ive assinada com HMAC-SHA256 e tokens revogáveis; lançamentos por conversa, com a Ive perguntando o que faltar"
+            "Busca aproximada (fuzzy search) nas transações"
         ]
     },
     {
@@ -152,14 +124,12 @@ export const projetos: Projeto[] = [
             "Tarefas privadas, visíveis só para quem criou",
             "Permissões de administrador e dependente, com pedidos de aprovação",
             "Tarefas recorrentes, calendário com feriados e notificações",
-            "Vários idiomas, tema escuro e login com Google",
-            "Controle por voz pela assistente Ive"
+            "Vários idiomas, tema escuro e login com Google"
         ],
         destaquesTecnicos: [
             "Expo Router e estado global com Zustand",
             "Firebase Auth, Firestore e Cloud Functions",
             "Regras de segurança do Firestore cobertas por testes",
-            "Integração com a Ive assinada com HMAC-SHA256, tokens revogáveis e limite de requisições",
             "Internacionalização com i18next"
         ]
     },

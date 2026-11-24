@@ -30,7 +30,6 @@ export interface Curso {
     duracao: string;
     plataforma: string;
     icone: string;
-    classeIcone: string;
     certificado?: string;
     conteudos?: { titulo: string; descricao: string }[];
 }
@@ -42,7 +41,7 @@ export const carreira: EtapaCarreira[] = [
         contexto: "Projetos próprios e para clientes",
         periodo: "2025 – atual",
         atividades: [
-            "Desenvolvi e publiquei apps mobile com React Native/Expo e Kotlin, com autenticação e banco de dados em tempo real (Firebase).",
+            "Desenvolvi e publiquei apps mobile com React Native/Expo e TypeScript, com autenticação e banco de dados em tempo real (Firebase).",
             "Criei uma plataforma web para cliente com Next.js, Express e MongoDB: loja virtual, pagamentos com MercadoPago/Stripe e login com Google.",
             "Faço o ciclo completo: interface, API, banco de dados e deploy."
         ]
@@ -135,7 +134,6 @@ export const cursos: Curso[] = [
         duracao: "200h - Concluído em outubro de 2026",
         plataforma: "Instituto Federal do Rio Grande do Sul (IFRS)",
         icone: "bi-code-slash",
-        classeIcone: "course-icon-web",
         certificado: "/certificados/Programador_Web-Certificado.pdf",
         conteudos: [
             { titulo: "HTML", descricao: "Estrutura de páginas, links, listas, imagens, áudio e vídeo, tabelas, formulários e acessibilidade." },
@@ -146,9 +144,9 @@ export const cursos: Curso[] = [
             { titulo: "Projeto de Sistemas Web", descricao: "Levantamento, análise e validação de requisitos, modelagem de sistemas, UML, padrões de projeto e documentação." }
         ]
     },
-    { nome: "Amazon AWS Certified Cloud", duracao: "80h - 2025", plataforma: "Udemy", icone: "bi-cloud-fill", classeIcone: "course-icon-aws" },
-    { nome: "Microsoft AZ-900", duracao: "5h - 2024", plataforma: "Udemy", icone: "bi-microsoft", classeIcone: "course-icon-microsoft" },
-    { nome: "Google Associate Cloud Engineer", duracao: "9h - 2024", plataforma: "Udemy", icone: "bi-google", classeIcone: "course-icon-google" },
-    { nome: "Fortigate Firewall NSE4", duracao: "8h - 2024", plataforma: "Udemy", icone: "bi-shield-lock-fill", classeIcone: "course-icon-fortigate" },
-    { nome: "CCNA 200-301", duracao: "80h - 2024", plataforma: "Udemy", icone: "bi-hdd-network-fill", classeIcone: "course-icon-cisco" }
+    { nome: "Amazon AWS Certified Cloud", duracao: "80h - 2025", plataforma: "Udemy", icone: "bi-cloud-fill" },
+    { nome: "Microsoft AZ-900", duracao: "5h - 2024", plataforma: "Udemy", icone: "bi-microsoft" },
+    { nome: "Google Associate Cloud Engineer", duracao: "9h - 2024", plataforma: "Udemy", icone: "bi-google" },
+    { nome: "Fortigate Firewall NSE4", duracao: "8h - 2024", plataforma: "Udemy", icone: "bi-shield-lock-fill" },
+    { nome: "CCNA 200-301", duracao: "80h - 2024", plataforma: "Udemy", icone: "bi-hdd-network-fill" }
 ];

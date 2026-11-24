@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Nunito, Nunito_Sans } from "next/font/google";
 import "bootstrap/dist/css/bootstrap-reboot.min.css";
-import "./utilities.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./globals.css";
 
-import SiteShell from "../components/layout/SiteShell";
+import AvisoTopo from "../components/layout/AvisoTopo";
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import { profile, siteUrl } from "../config/site.config";
 
-const inter = Inter({
-  variable: "--font-sans",
+// Títulos arredondados e texto corrido mais leve, no estilo da referência
+const nunito = Nunito({
+  variable: "--font-titulo",
   subsets: ["latin"],
+  weight: ["700", "800", "900"],
 });
 
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-mono",
+const nunitoSans = Nunito_Sans({
+  variable: "--font-texto",
   subsets: ["latin"],
 });
 
@@ -45,9 +48,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
-        <SiteShell>{children}</SiteShell>
+    <html lang="pt-BR" data-scroll-behavior="smooth">
+      <body className={`${nunito.variable} ${nunitoSans.variable}`}>
+        <a href="#conteudo" className="pular-link">
+          Pular para o conteúdo
+        </a>
+        <AvisoTopo />
+        <Header />
+        <main id="conteudo" tabIndex={-1}>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
