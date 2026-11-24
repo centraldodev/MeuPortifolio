@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 
 import { experience, profile } from "../../config/site.config";
 import { projetos } from "../../data/projects";
 import { getImagePath } from "../../utils/helpers";
 import HeroIlustracao from "./HeroIlustracao";
+import LinkSecao from "../layout/LinkSecao";
 
 const emProducao = projetos.filter((p) => p.status === "Em produção").length;
 
@@ -43,12 +43,12 @@ export default function Hero() {
                     </p>
 
                     <div className="hero-acoes">
-                        <Link href="/#projetos" className="botao botao-azul">
+                        <LinkSecao secao="projetos" className="botao botao-azul">
                             Ver projetos
-                        </Link>
-                        <Link href="/#contato" className="botao botao-texto">
+                        </LinkSecao>
+                        <LinkSecao secao="contato" className="botao botao-texto">
                             Fale comigo <i className="bi bi-arrow-right" aria-hidden="true"></i>
-                        </Link>
+                        </LinkSecao>
                     </div>
 
                     <ul className="hero-numeros">

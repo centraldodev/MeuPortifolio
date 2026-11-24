@@ -11,12 +11,6 @@ export interface Diferencial {
     descricao: string;
 }
 
-export interface InfraCategoria {
-    titulo: string;
-    icone: string;
-    itens: string[];
-}
-
 export interface Formacao {
     curso: string;
     instituicao: string;
@@ -80,34 +74,6 @@ export const diferenciais: Diferencial[] = [
         titulo: "Processos & Usuário",
         icone: "bi-people-fill",
         descricao: "Anos de ITIL e atendimento: comunicação clara com equipes e foco em quem usa o sistema."
-    }
-];
-
-export const infraCategorias: InfraCategoria[] = [
-    {
-        titulo: "Redes",
-        icone: "bi-hdd-network-fill",
-        itens: ["Cisco (L2/L3)", "SD-WAN", "VLAN", "VRF", "IPv4/IPv6", "DHCP", "DNS", "VPN IPsec", "MPLS", "BGP", "OSPF", "Voz IP"]
-    },
-    {
-        titulo: "Servidores & Virtualização",
-        icone: "bi-server",
-        itens: ["Windows Server", "Linux", "Active Directory", "Azure AD", "GPO", "VMware", "Hyper-V"]
-    },
-    {
-        titulo: "Segurança & Monitoramento",
-        icone: "bi-shield-lock-fill",
-        itens: ["pfSense", "Fortigate", "SolarWinds", "Zabbix"]
-    },
-    {
-        titulo: "Cloud",
-        icone: "bi-cloud-fill",
-        itens: ["AWS", "Azure"]
-    },
-    {
-        titulo: "Gestão & Automação",
-        icone: "bi-gear-fill",
-        itens: ["Shell Script", "Bash", "ITIL", "COBIT", "BMC Remedy", "ServiceNow"]
     }
 ];
 

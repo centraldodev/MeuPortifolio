@@ -1,11 +1,11 @@
 "use client";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import { menuItems, profile } from "../../config/site.config";
 import { getImagePath } from "../../utils/helpers";
 import LogoMarca from "./LogoMarca";
+import LinkSecao from "./LinkSecao";
 
 export default function Header() {
     const pathname = usePathname();
@@ -55,13 +55,13 @@ export default function Header() {
     return (
         <header className={`topo ${rolou ? "rolou" : ""} ${menuAberto ? "menu-aberto" : ""}`}>
             <div className="container topo-conteudo">
-                <Link href="/#inicio" className="marca" onClick={fecharMenu}>
+                <LinkSecao secao="inicio" className="marca" onClick={fecharMenu}>
                     <LogoMarca />
                     <span className="marca-texto">
                         <strong>{profile.name}</strong>
                         <small>dev web &amp; mobile</small>
                     </span>
-                </Link>
+                </LinkSecao>
 
                 <button
                     type="button"
@@ -80,14 +80,14 @@ export default function Header() {
                             const ativo = naHome && secaoAtiva === item.id;
                             return (
                                 <li key={item.id}>
-                                    <Link
-                                        href={`/#${item.id}`}
+                                    <LinkSecao
+                                        secao={item.id}
                                         className={`menu-link ${ativo ? "ativo" : ""}`}
                                         aria-current={ativo ? "location" : undefined}
                                         onClick={fecharMenu}
                                     >
                                         {item.label}
-                                    </Link>
+                                    </LinkSecao>
                                 </li>
                             );
                         })}

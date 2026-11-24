@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Projeto, projetos } from "../../data/projects";
 import ProjectImage from "./ProjectImage";
 import ProjectBadges from "./ProjectBadges";
+import LinkSecao from "../layout/LinkSecao";
 
 export default function ProjectDetail({ projeto }: { projeto: Projeto }) {
     const indice = projetos.findIndex((p) => p.id === projeto.id);
@@ -11,9 +12,9 @@ export default function ProjectDetail({ projeto }: { projeto: Projeto }) {
         <article className="detalhe">
             <div className="detalhe-topo">
                 <div className="container">
-                    <Link href="/#projetos" className="voltar-link">
+                    <LinkSecao secao="projetos" className="voltar-link">
                         <i className="bi bi-arrow-left" aria-hidden="true"></i> Todos os projetos
-                    </Link>
+                    </LinkSecao>
 
                     <div className="detalhe-cabecalho">
                         <div className="detalhe-intro">
